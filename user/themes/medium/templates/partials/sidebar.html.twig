@@ -22,7 +22,15 @@
 </div>
 {% endif %}
 
-<footer>
+{% if config.plugins.simplesearch.enabled %}
+<hr>
+<div style="text-align:center">
+	{% include 'partials/simplesearch_searchbox.html.twig' %}
+</div>
+<script type='text/javascript' src='{{ url('plugin://simplesearch/js/simplesearch.js') }}'></script>
+{% endif %}
+
+<footer id="footer">
   <hr>
   <p class="footer--text">&copy; {{ site.title }} {{ t("now"|date('Y')) }}</p>
 </footer>

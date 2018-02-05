@@ -1,7 +1,17 @@
-title: Grav
+title: 'Bruno Daniel Gonçalves'
+default_lang: en
 author:
-  name: Joe Bloggs
-  email: 'joe@test.com'
+  name: 'Bruno Daniel Gonçalves'
+  email: brunodgoncalves32@gmail.com
+taxonomies:
+  - category
+  - tag
 metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-
+  description: 'Engineer / Programmer / Musician'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

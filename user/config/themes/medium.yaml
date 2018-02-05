@@ -1,6 +1,6 @@
 enabled: true
 default_lang: en
-infinite_scroll: true
+infinite_scroll: false
 analytics: UA-YOURCODE
 social:
     twitter: @getgrav

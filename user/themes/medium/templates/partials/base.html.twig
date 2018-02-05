@@ -10,13 +10,35 @@
 
   <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.metadata.description }}">
-  <link rel="shortcut icon" href="{{ url('theme://dist/images/favicon.ico') }}" />
+  <link rel="shortcut icon" href="/favicon.ico?v=1.0">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico?v=1.0">
+	<link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png?v=1.0">
+	<link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png?v=1.0">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png?v=1.0">
+	<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png?v=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=1.0">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=1.0">
+	<link rel="apple-touch-icon" href="/favicon-57.png?v=1.0">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png?v=1.0">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png?v=1.0">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png?v=1.0">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png?v=1.0">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png?v=1.0">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png?v=1.0">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png?v=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png?v=1.0">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="/favicon-144.png?v=1.0">
+	<meta name="msapplication-config" content="/browserconfig.xml">
+
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/rss.xml">
 
   {% block stylesheets %}
     {% do assets.addCss('theme://dist/styles/app.min.css',100) %}
   {% endblock %}
   {{ assets.css() }}
+
+  <link href="/user/themes/medium/dist/styles/custom.css" type="text/css" rel="stylesheet" />
 
   {% block javascripts %}
       {% do assets.addJs('theme://bower_components/jquery/dist/jquery.min.js') %}
@@ -25,6 +47,7 @@
       {% do assets.addJs('theme://dist/scripts/main.min.js') %}
   {% endblock %}
   {{ assets.js() }}
+
 
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
 

@@ -3,15 +3,6 @@
     {% set collection = page.collection %}
     {% set pagination = collection.params.pagination %}
 
-    {% set jscroll_init %}
-    $(document).ready(function() {
-        $('.infinite-scroll').jscroll({
-        autoTrigger: true,
-        nextSelector: '[rel="next"]'
-        });
-    });
-    {% endset %}
-
     {% block javascripts %}
         {{ parent() }}
         {% do assets.addInlineJs(jscroll_init) %}
@@ -26,12 +17,12 @@
     {% endblock %}
 
     {% block content %}
-      <div class="infinite-scroll columns small-12 large-8">
+      <div class="infinite-scroll columns small-12 large-8" style="margin:auto">
         {% for post in collection %}
           {% include 'partials/post-item.html.twig' %}
         {% endfor %}
         {% if config.plugins.pagination.enabled and collection.params.pagination %}
-            {% include 'partials/load-more.html.twig' %}
+            {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
         {% endif %}
       </div>
 
